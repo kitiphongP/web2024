@@ -216,9 +216,6 @@
           score++;
         }
 
-        // แสดงผลรวมคะแนน
-        modalBody += `<div><strong>คะแนนรวมของคุณ:</strong> ${score}/${quizlist.length}</div>`;
-
         // แสดงผลคะแนนและคำตอบของแต่ละข้อ
         modalBody += `
           <div class='p-2'>
@@ -234,7 +231,8 @@
           </div>
         `;
       });
-
+      // แสดงผลรวมคะแนน
+        modalBody += `<div><strong>คะแนนรวมของคุณ:</strong> ${score}/${quizlist.length}</div>`;
       // แสดง modal พร้อมผลตรวจคำตอบ
       $("#modalBody").html(modalBody);
       var myModal = new bootstrap.Modal(document.getElementById('answerModal'));
