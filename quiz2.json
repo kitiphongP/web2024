@@ -1,0 +1,202 @@
+[
+    {
+        "title": "What is 15% of 200?",
+        "options": [
+            "30",
+            "25",
+            "20",
+            "15"
+        ],
+        "answer": 1
+    },
+    {
+        "title": "Solve for x: 2x + 6 = 16",
+        "options": [
+            "2",
+            "5",
+            "10",
+            "8"
+        ],
+        "answer": 2
+    },
+    {
+        "title": "How many sides does a hexagon have?",
+        "options": [
+            "6",
+            "8",
+            "7",
+            "5"
+        ],
+        "answer": 1
+    },
+    {
+        "title": "What is the square root of 144?",
+        "options": [
+            "12",
+            "14",
+            "11",
+            "13"
+        ],
+        "answer": 1
+    },
+    {
+        "title": "If the area of a circle is 78.5, what is the radius? (Use π = 3.14)",
+        "options": [
+            "5",
+            "6",
+            "7",
+            "8"
+        ],
+        "answer": 1
+    },
+    {
+        "title": "What is the derivative of 3x^2?",
+        "options": [
+            "6x",
+            "3x",
+            "9x",
+            "6"
+        ],
+        "answer": 1
+    },
+    {
+        "title": "If 3x - 2y = 12 and x = 4, what is y?",
+        "options": [
+            "0",
+            "2",
+            "-2",
+            "-4"
+        ],
+        "answer": 1
+    },
+    {
+        "title": "What is the volume of a cube with edge length 3 cm?",
+        "options": [
+            "9",
+            "27",
+            "81",
+            "18"
+        ],
+        "answer": 2
+    },
+    {
+        "title": "How many outcomes are possible with 4 coin flips?",
+        "options": [
+            "8",
+            "12",
+            "16",
+            "24"
+        ],
+        "answer": 3
+    },
+    {
+        "title": "What is the median of the set {3, 7, 9, 12}?",
+        "options": [
+            "7",
+            "8",
+            "9",
+            "10"
+        ],
+        "answer": 2
+    },
+    {
+        "title": "Log3x=2, x = ?",
+        "options": [
+            "3",
+            "2",
+            "9",
+            "23"
+        ],
+        "answer": 3
+    },
+    {
+        "title": "Logx32 =5,  x=?",
+        "options": [
+            "3",
+            "5",
+            "4",
+            "2"
+        ],
+        "answer": 4
+    },
+    {
+        "title": "Logx125=3, x = ?",
+        "options": [
+            "3",
+            "5",
+            "2",
+            "25"
+        ],
+        "answer": 2
+    },
+    {
+        "title": "Log5x = 3, x = ?",
+        "options": [
+            "243",
+            "125",
+            "25",
+            "81"
+        ],
+        "answer": 2
+    },
+    {
+        "title": "Logy512 = 3, y = ?",
+        "options": [
+            "8",
+            "7",
+            "3",
+            "2"
+        ],
+        "answer": 1
+    },
+    {
+        "title": "What is the value of log⁡10100?",
+        "options": [
+            "0",
+            "1",
+            "2",
+            "3"
+        ],
+        "answer": 3
+    },
+    {
+        "title": "Which of the following is the logarithmic form of 1000 = 10³?",
+        "options": [
+            "Log 1000 = 10³",
+            "Log₁₀ 1000 = 3",
+            "Log₁₀ 3 = 1000",
+            "Log 3 = 1000   "
+        ],
+        "answer": 1
+    },
+    {
+        "title": "If logₐ x = 3, what is the value of x?",
+        "options": [
+            "X = a³",
+            "X = log a³",
+            "X = 3ᵃ",
+            "X = a²"
+        ],
+        "answer": 1
+    },
+    {
+        "title": "Which of the following is the logarithmic property of logₐ(xy)?",
+        "options": [
+            "Logₐ x + logₐ y",
+            "Logₐ x - logₐ y",
+            "Logₐ x * logₐ y",
+            "Logₐ x / logₐ y"
+        ],
+        "answer": 1
+    },
+    {
+        "title": "What is the value of log₁₀ 0.01?",
+        "options": [
+            "-2",
+            "-1",
+            "2",
+            "1"
+        ],
+        "answer": 1
+    }
+]
