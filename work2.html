@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@5.x/css/materialdesignicons.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/vuetify@3.7.4/dist/vuetify.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/vuetify@3.7.4/dist/vuetify.min.js"></script>
+    <title>Quiz Application</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            background-color: #f9f9f9;
+        }
+        #app {
+            max-width: 800px;
+            margin: auto;
+            padding: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <v-app>
+            <v-container>
+                <!-- Header -->
+                <v-row justify="center" class="mb-4">
+                    <v-col cols="12" class="text-center">
+                        <v-card class="elevation-3 pa-4">
+                            <h1>แบบทดสอบ</h1>
+                        </v-card>
+                    </v-col>
+                </v-row>
+
+                <!-- Page 1: Introduction -->
+                <div v-if="page === 1">
+                    <v-row justify="center">
+                        <v-col cols="12" class="text-center">
+                            <v-btn color="primary" elevation="2" @click="page = 2">
+                                เริ่มทำแบบทดสอบ
+                            </v-btn>
+                        </v-col>
+                    </v-row>
+                </div>
+
+                <!-- Page 2: Quiz -->
+                <div v-if="page === 2">
+                    <v-row v-for="(q, i) in qlist" :key="i" class="mb-4">
+                        <v-col cols="12">
+                            <v-card class="elevation-2 pa-4">
+                                <h3>ข้อที่ {{ i + 1 }}</h3>
+                                <div v-html="q.title" class="mb-2"></div>
+                                <v-radio-group v-model="answers[i]" row>
+                                    <v-radio 
+    v-for="(otxt, ov) in q.options" 
+    :key="ov" 
+    :label="`${ov + 1}. ${otxt}`" 
+    :value="ov + 1"
+/>
+
+                                </v-radio-group>
+                            </v-card>
+                        </v-col>
+                    </v-row>
+
+                    <v-row justify="center">
+                        <v-col cols="12" class="text-center">
+                            <v-btn :disabled="!validate()" color="success" elevation="2" @click="grading">
+                                <v-icon left>mdi-check</v-icon> ตรวจคำตอบ
+                            </v-btn>
+                        </v-col>
+                    </v-row>
+                </div>
+
+                <!-- Page 3: Result -->
+                <div v-if="page === 3">
+                    <v-row justify="center">
+                        <v-col cols="12" class="text-center">
+                            <v-card class="elevation-3 pa-4">
+                                <h2>คุณได้คะแนน {{ score }} / {{ qlist.length }}</h2>
+                                <v-btn color="primary" elevation="2" @click="resetQuiz">
+                                    ทำแบบทดสอบใหม่
+                                </v-btn>
+                                <v-btn class="ma-2" color="info" @click="page = 4">
+                                    ดูเฉลย
+                                </v-btn>
+                            </v-card>
+                        </v-col>
+                    </v-row>
+                </div>
+                <div v-if="page === 4">
+                    <v-row v-for="(q, i) in qlist" :key="i" class="mb-4">
+                        <v-col cols="12">
+                            <v-card class="elevation-2 pa-4">
+                                <h3>ข้อที่ {{ i + 1 }}</h3>
+                                <div v-html="q.title" class="mb-2"></div>
+                                <div>
+                                    <p><strong>คำตอบที่เลือก:</strong> {{ q.options[answers[i] - 1] || 'ไม่ได้ตอบ' }}</p>
+                                    <p><strong>คำตอบที่ถูกต้อง:</strong> {{ q.options[q.answer - 1] }}</p>
+                                </div>
+                                <div v-if="answers[i] == q.answer" class="text-success">
+                                    <v-icon left color="green">mdi-check</v-icon> ตอบถูก
+                                </div>
+                                <div v-else class="text-error">
+                                    <v-icon left color="red">mdi-close</v-icon> ตอบผิด
+                                </div>
+                            </v-card>
+                        </v-col>
+                    </v-row>
+                    <v-btn class="ma-2" color="primary" @click="resetQuiz()">ทำแบบทดสอบใหม่</v-btn>
+                </div>                
+            </v-container>
+        </v-app>
+    </div>
+
+    <script>
+        const { createApp } = Vue;
+        const { createVuetify } = Vuetify;
+
+        const vuetify = createVuetify();
+
+        const app = createApp({
+            data() {
+                return {
+                    qlist: [],
+                    answers: [],
+                    score: 0,
+                    page: 1,
+                };
+            },
+            mounted() {
+                this.load_data();
+            },
+            methods: {
+                async load_data() {
+                    const res = await fetch("quiz2.json");
+                    this.qlist = await res.json();
+                },
+                validate() {
+                    return this.qlist.every((_, i) => this.answers[i] !== undefined);
+                },
+                grading() {
+                    this.score = this.qlist.reduce((total, q, i) => total + (this.answers[i] === q.answer ? 1 : 0), 0);
+                    this.page = 3;
+                },
+                resetQuiz() {
+                    this.answers = [];
+                    this.score = 0;
+                    this.page = 1;
+                },
+            },
+        });
+
+        app.use(vuetify).mount("#app");
+    </script>
+</body>
+</html>
