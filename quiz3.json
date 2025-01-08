@@ -1,0 +1,29 @@
+{
+  "subjects": [
+    {
+      "subject": "คณิตศาสตร์ระดับประถม",
+      "questions": [
+        { "title": "1 + 2 = ?", "options": ["1", "2", "3", "4"], "answer": 3 },
+        { "title": "5 - 3 = ?", "options": ["1", "2", "3", "4"], "answer": 2 },
+        { "title": "4 x 2 = ?", "options": ["6", "7", "8", "9"], "answer": 3 },
+        { "title": "9 ÷ 3 = ?", "options": ["2", "3", "4", "5"], "answer": 2 },
+        { "title": "6 + 7 = ?", "options": ["12", "13", "14", "15"], "answer": 2 },
+        { "title": "10 - 4 = ?", "options": ["5", "6", "7", "8"], "answer": 2 },
+        { "title": "3 x 3 = ?", "options": ["6", "7", "8", "9"], "answer": 4 },
+        { "title": "8 ÷ 4 = ?", "options": ["1", "2", "3", "4"], "answer": 2 },
+        { "title": "7 + 2 = ?", "options": ["8", "9", "10", "11"], "answer": 2 },
+        { "title": "5 x 2 = ?", "options": ["8", "9", "10", "11"], "answer": 3 },
+        { "title": "12 ÷ 4 = ?", "options": ["2", "3", "4", "5"], "answer": 3 },
+        { "title": "9 + 5 = ?", "options": ["13", "14", "15", "16"], "answer": 2 },
+        { "title": "15 - 6 = ?", "options": ["8", "9", "10", "11"], "answer": 2 },
+        { "title": "4 x 4 = ?", "options": ["12", "14", "16", "18"], "answer": 3 },
+        { "title": "18 ÷ 2 = ?", "options": ["8", "9", "10", "11"], "answer": 2 },
+        { "title": "6 + 8 = ?", "options": ["13", "14", "15", "16"], "answer": 2 },
+        { "title": "20 - 4 = ?", "options": ["14", "15", "16", "17"], "answer": 3 },
+        { "title": "7 x 2 = ?", "options": ["12", "13", "14", "15"], "answer": 3 },
+        { "title": "10 ÷ 5 = ?", "options": ["1", "2", "3", "4"], "answer": 2 },
+        { "title": "8 + 3 = ?", "options": ["10", "11", "12", "13"], "answer": 2 }
+      ]
+    }
+  ]
+}
