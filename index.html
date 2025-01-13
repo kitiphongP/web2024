@@ -1,47 +1,60 @@
-          #007bff, #5ac8fa);
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+      body {
+        background: linear-gradient(to right, #007bff, #5ac8fa);
         color: #ffffff;
         min-height: 100vh;
         margin: 0;
         display: flex;
         align-items: center;
         justify-content: center;
+        font-family: 'Arial', sans-serif;
       }
       .portfolio-container {
         background-color: #ffffff;
         color: #343a40;
         border-radius: 15px;
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-        max-width: 900px;
+        max-width: 1100px;
         width: 100%;
-        padding: 30px;
+        padding: 40px;
       }
       .portfolio-header {
         text-align: center;
         margin-bottom: 30px;
       }
       .portfolio-header h1 {
-        font-size: 2.5rem;
+        font-size: 3rem;
         font-weight: bold;
         color: #007bff;
       }
       .portfolio-header p {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
         color: #6c757d;
       }
-      .portfolio-links a {
-        display: block;
-        font-size: 1.2rem;
-        margin: 15px 0;
-        padding: 10px 20px;
-        color: #ffffff;
-        background-color: #007bff;
-        border-radius: 5px;
-        text-decoration: none;
-        text-align: center;
-        transition: background-color 0.3s;
+      .portfolio-links .card {
+        border: none;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+        overflow: hidden;
+        transition: transform 0.3s;
       }
-      .portfolio-links a:hover {
-        background-color: #0056b3;
+      .portfolio-links .card:hover {
+        transform: scale(1.05);
+      }
+      .portfolio-links .card img {
+        height: 200px;
+        object-fit: cover;
+      }
+      .portfolio-links .card-title {
+        color: #007bff;
+        font-weight: bold;
       }
       .footer {
         text-align: center;
@@ -50,24 +63,63 @@
         color: #6c757d;
       }
     </style>
-  </head>
-  <body>
-    <div class="portfolio-container">
-      <div class="portfolio-header">
-        <h1>Portfolio</h1>
-        <p>โดย นายกิติพงษ์ ปักษีเลิศ</p>
+</head>
+<body>
+  <div class="portfolio-container">
+    <div class="portfolio-header">
+      <h1>Portfolio</h1>
+      <p>โดย นายกิติพงษ์ ปักษีเลิศ</p>
+    </div>
+
+    <div class="portfolio-links row g-4">
+      <div class="col-md-6 col-lg-4">
+        <div class="card">
+          <img src="work1-thumbnail.jpg" class="card-img-top" alt="งานที่ 1">
+          <div class="card-body">
+            <h5 class="card-title">งานที่ 1</h5>
+            <p class="card-text">คำอธิบายสั้นๆ เกี่ยวกับงานนี้</p>
+            <a href="work1.html" class="btn btn-primary">ดูเพิ่มเติม</a>
+          </div>
+        </div>
       </div>
-      <div class="portfolio-links">
-        <a href="work1.html">งานที่ 1: </a>
-        <a href="work2.html">งานที่ 2: </a>
-        <a href="w3.html">งานที่ 3:</a>
-        <a href="work4.html">งานที่ 4: </a>
+      <div class="col-md-6 col-lg-4">
+        <div class="card">
+          <img src="work2-thumbnail.jpg" class="card-img-top" alt="งานที่ 2">
+          <div class="card-body">
+            <h5 class="card-title">งานที่ 2</h5>
+            <p class="card-text">คำอธิบายสั้นๆ เกี่ยวกับงานนี้</p>
+            <a href="work2.html" class="btn btn-primary">ดูเพิ่มเติม</a>
+          </div>
+        </div>
       </div>
-      <div class="footer">
-        &copy; 2025 กิติพงษ์ ปักษีเลิศ. All rights reserved.
+      <div class="col-md-6 col-lg-4">
+        <div class="card">
+          <img src="work3-thumbnail.jpg" class="card-img-top" alt="งานที่ 3">
+          <div class="card-body">
+            <h5 class="card-title">งานที่ 3</h5>
+            <p class="card-text">คำอธิบายสั้นๆ เกี่ยวกับงานนี้</p>
+            <a href="w3.html" class="btn btn-primary">ดูเพิ่มเติม</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="card">
+          <img src="work4-thumbnail.jpg" class="card-img-top" alt="งานที่ 4">
+          <div class="card-body">
+            <h5 class="card-title">งานที่ 4</h5>
+            <p class="card-text">คำอธิบายสั้นๆ เกี่ยวกับงานนี้</p>
+            <a href="work4.html" class="btn btn-primary">ดูเพิ่มเติม</a>
+          </div>
+        </div>
       </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  </body>
+
+    <div class="footer">
+      &copy; 2025 กิติพงษ์ ปักษีเลิศ. All rights reserved.
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
 
