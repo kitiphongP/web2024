@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* เพิ่มการจัดตำแหน่งวิดีโอให้อยู่ตรงกลาง */
+        .video-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* ให้วิดีโออยู่กลางหน้าจอ */
+        }
+        video {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div data-snack-id="@kitiphong/work5-kp" data-snack-platform="web" data-snack-preview="true" data-snack-theme="light" style="overflow:hidden;background:#fbfcfd;border:1px solid var(--color-border);border-radius:4px;height:505px;width:100%"></div>
+    <script async src="https://snack.expo.dev/embed.js"></script>
+
+    <!-- เพิ่ม container เพื่อจัดวางวิดีโอให้อยู่กลาง -->
+    <div class="video-container">
+        <video src="test.mp4" controls autoplay></video>
+    </div>
+</body>
+</html>
